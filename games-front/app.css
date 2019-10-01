@@ -62,6 +62,7 @@ html, body {
     overflow: hidden;
     /* margin: 0; */
     color: white;
+    overflow: auto;
 }
 
 html {
@@ -83,7 +84,11 @@ header {
     padding: 5vh;
     border-bottom: 0.4px rgb(83, 83, 83) solid;
     background-color: rgba(128, 128, 128, 0.788);
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+label {
+    text-shadow: 1px 2px 3px black;
 }
 
 .title {
@@ -96,6 +101,7 @@ header {
     padding-left: 7vh;
     color: white;
     font-family: 'Turret Road', cursive;
+    text-shadow: 2px 2px 8px black;
 }
 
 
@@ -146,10 +152,59 @@ label:nth-of-type(2){
 }
 
 input:focus {
+    border: 1px solid rgb(140, 20, 138);
+    box-shadow: 3px 3px 15px rgb(140, 20, 138); 
     outline: none;
-    /* -moz-outline-radius: 2vh; */
+}
+select:focus {
+    border: 1px solid rgb(140, 20, 138);
+    box-shadow: 3px 3px 15px rgb(140, 20, 138); 
+    outline: none;
 }
 
 [for="title"]{
     text-align: center;
+}
+
+button:nth-of-type(1){
+    border-color: rgba(128, 128, 128, 0.685);
+}
+
+.selects label {
+    margin: 1vh;
+}
+
+.search-game  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    height: max-content;
+    visibility: hidden;
+}
+
+.search-game input, label, button {
+    margin: 2.5vh;
+    padding: 2vh;
+    font-size: 180%;
+
+}
+
+.search-game input {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.486);
+    box-sizing: border-box;
+    border: 1px solid rgba(128, 128, 128, 0.445);
+    border-radius: 2vh;
+}
+
+[for="name"]{
+    font-size: 200%
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.shown {
+    visibility: show;
 }

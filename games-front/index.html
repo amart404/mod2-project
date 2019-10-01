@@ -17,10 +17,16 @@
     <br>
     <div class="form">
         <form action="POST" action="http://localhost:3000/users" class="input-user">
-            <label for="name">What is your name?</label>
+            <label for="name">Hi there! Let's find you a game. What's your name?</label>
             <input type="text" name="name" id="name" placeholder="John Appleseed" autocomplete="off">
-            <div class="selects">
+            <button>Submit</button>
+        </form>
+        <form action="GET" action="http://localhost:3000/games" class="search-game">
+            <label for="selects">Select game by:</label>
+            <div class="selects" id="selects">
+                <label for="genre">Genre:</label>
                 <select name="genre" id="genre"></select>
+                <label for="platform">Platform:</label>
                 <select name="platform" id="platform">
                     <option value="xbox">Xbox</option>
                     <option value="playstation">Playstation</option>
@@ -33,7 +39,7 @@
             <input type="text" name="title" id="title" placeholder="Super Mario Odyssey" autocomplete="off">
 
             <button>Submit</button>
-        </form>
+        </form>    
     </div>
     <div class="form">
         <form action="GET" action="http://localhost:3000/games">
