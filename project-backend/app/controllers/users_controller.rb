@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create({
-            name: params([:name])
+            name: params[:name]
         })
 
         render json: @user

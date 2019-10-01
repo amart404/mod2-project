@@ -21,33 +21,23 @@ gameModel =  http.request(request).body
 finalModel = JSON.parse(gameModel)
 
 finalModel.each do |game|
-    Game.create({
-        name: game["name"],
-        genre: game["genres"],
-        platform: game["platforms"],
-        rating: game["rating"],
-        summary: game["summary"],
-        cover: game["cover"]
-    })
+    if game["genres"] == nil || game["platforms"] == nil
+        Game.create({
+            name: game["name"],
+            genre: game["genres"],
+            platform: game["platforms"],
+            rating: game["rating"],
+            summary: game["summary"],
+            cover: game["cover"]
+        })
+    else
+        Game.create({
+            name: game["name"],
+            genre: game["genres"][0]["name"],
+            platform: game["platforms"][0]["name"],
+            rating: game["rating"],
+            summary: game["summary"],
+            cover: game["cover"]
+        })
+    end
 end
-
-# Game.all.each do |game|
-#     if game.genre != ''
-#         genreArray = eval(game.genre)
-
-#         game.genre = genreArray.map{|genre| genre["name"]}
-#     end
-
-#     if game.platform != ''
-#         platArray = eval(game.platform)
-
-#         game.platform = platArray.map{|platform| platform["name"]}
-#     end
-
-#     if game.cover != ''
-#         coverInfo = eval(game.cover)
-#         coverUrl = coverInfo["url"]
-
-#         game.cover = coverUrl[2..-1]
-#     end
-# end
