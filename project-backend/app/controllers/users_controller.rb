@@ -16,6 +16,6 @@ class UsersController < ApplicationController
             name: params[:name]
         })
 
-        render json: @user
+        redirect_to "http://localhost:5500/games-front/search.html"
     end
 end

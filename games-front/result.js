@@ -22,6 +22,6 @@ function createCards(games){
     body.append(h2, div)
 }
 
-fetch(`http://localhost:3000/games/${query1}&${query2}`)
+fetch(`http://localhost:3000/games/?genre=${query1}&?platform=${query2}`)
     .then(response => response.json())
     .then(createCards)

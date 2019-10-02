@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Turret+Road:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overpass:300i,400,400i,700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,15 +47,6 @@ table {
 /* ======================= */
 
 
-@keyframes type {
-    from {
-        opacity: 0;   
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 html, body {
     min-width: 100%;
     min-height: 100%;
@@ -66,13 +57,15 @@ html, body {
 }
 
 html {
-    background: linear-gradient(to bottom, #6028A7, transparent), linear-gradient(to bottom right, #6028A7, transparent)
+    background: linear-gradient(to bottom, #6028A7, transparent),
+         linear-gradient(to bottom right, #6028A7, transparent);
+    font-family: 'Overpass', sans-serif
+
 }
 
 .container {
     background: url("collage.jpg");
     background-position: inherit;
-    background-color: grey;
 }
 
 
@@ -81,9 +74,9 @@ header {
     justify-items: center;
     align-items: center;
     width: 100%;
-    padding: 5vh;
+    padding: 7vh;
     border-bottom: 0.4px rgb(83, 83, 83) solid;
-    background-color: rgba(128, 128, 128, 0.788);
+    background-color: rgba(128, 128, 128, 0.74);
     overflow-x: hidden;
 }
 
@@ -100,7 +93,7 @@ label {
     font-size: 10vh;
     padding-left: 7vh;
     color: white;
-    font-family: 'Turret Road', cursive;
+    font-family: 'Overpass', sans-serif;
     text-shadow: 2px 2px 8px black;
 }
 
@@ -131,7 +124,9 @@ button {
 select {
     padding: 2vh;
     font-size: 150%;
-    -webkit-appearance: none;
+    height: 60px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.486);
+    /* width: 150px; */
 }
 
 
@@ -151,23 +146,15 @@ label:nth-of-type(2){
     border-radius: 2vh;
 }
 
-input:focus {
-    border: 1px solid rgb(140, 20, 138);
-    box-shadow: 3px 3px 15px rgb(140, 20, 138); 
-    outline: none;
-}
+
 select:focus {
     border: 1px solid rgb(140, 20, 138);
-    box-shadow: 3px 3px 15px rgb(140, 20, 138); 
+    box-shadow: 3px 3px 15px rgb(140, 20, 138);
     outline: none;
 }
 
 [for="title"]{
     text-align: center;
-}
-
-button:nth-of-type(1){
-    border-color: rgba(128, 128, 128, 0.685);
 }
 
 .selects label {
@@ -180,14 +167,13 @@ button:nth-of-type(1){
     justify-content: center;
     flex-flow: column nowrap;
     height: max-content;
-    visibility: hidden;
+
 }
 
 .search-game input, label, button {
     margin: 2.5vh;
     padding: 2vh;
     font-size: 180%;
-
 }
 
 .search-game input {
@@ -205,6 +191,109 @@ button:nth-of-type(1){
     visibility: hidden;
 }
 
+.selects {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .shown {
     visibility: show;
+}
+
+[type="submit"]{
+    background-color: #0032AB;
+    color: white; 
+    border-color: rgba(128, 128, 128, 0.685);
+}
+[type="submit"]:hover{
+    background-color: rgb(21, 38, 136);
+    border: 1px solid rgba(0, 0, 255, 0.178)
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 2vh;
+    background: rgba(49, 46, 46, 0.541);
+    font-size: 2rem;
+    border-bottom: grey solid 1px;
+    color: rgb(177, 161, 166);
+    font-family: 'Overpass', sans-serif
+}
+#brand {
+    float: left;
+    display: flex;
+    border-radius: 5vh;
+}
+#brand a {
+    color: rgb(179, 111, 131);
+}
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    float: right;
+}
+
+nav ul li {
+    border: 1px black solid;
+    padding: 2vh 6vh;
+}
+
+#brand li:hover{
+    color: rgb(218, 134, 159)
+}
+
+nav ul li:hover {
+    background: rgba(128, 128, 128, 0.384);
+    text-shadow: 2px 2px 6px black;
+    font-weight: 400;
+    color: rgb(199, 183, 188);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(177, 161, 166);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+input:focus {
+    border: 1px solid rgb(140, 20, 138);
+    box-shadow: 3px 3px 15px rgb(140, 20, 138); 
+    outline: none;
+}
+
+.about-title {
+    font-size: 40px;
+    text-align: center;
+    margin: 4vh;
+}
+
+p {
+    width: 60%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vh;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+}
+
+#searchTitle {
+    font-size: 40px;
+    text-align: center;
+    margin: 4vh;
+    text-shadow: 2px 2px 8px black;
+}
+
+img {
+    height: 200px;
 }

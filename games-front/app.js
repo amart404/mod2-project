@@ -1,13 +1,14 @@
 let i = 0
-let text = "orking Title"
+let text = "etter Than Steam"
 const title = document.querySelector(".title")
-let speed = 200;
+let speed = 150;
 const select = document.querySelector("#genre")
 const userForm = document.querySelector(".input-user")
 const gameForm = document.querySelector(".search-game")
+const button = document.querySelector("#button")
 
 
-// setTimeout(typeEffect, 500)
+setTimeout(typeEffect, 100)
 
 function typeEffect() {
     if (i < text.length){
@@ -17,23 +18,8 @@ function typeEffect() {
     }
 }
 
-typeEffect();
+// typeEffect();
 
-userForm.addEventListener("submit", ()=> {
-    userForm.classList.toggle("hidden")
-    gameForm.classList.toggle("shown")
-})
-
-function addOption(genres){
-    genres.forEach(genre => {
-        option = document.createElement("option")
-        option.innerHTML = genre.name
-        select.append(option)
-    })
-}
-
-
-
-fetch("http://localhost:3000/genres")
-    .then(response => response.json())
-    .then(addOption)
+// userForm.addEventListener("submit", ()=> {
+//     window.location.href = 'http://localhost:5500/games-front/search.html';
+// })
