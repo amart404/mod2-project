@@ -26,7 +26,7 @@ finalModel.each do |game|
             name: game["name"],
             genre: game["genres"],
             platform: game["platforms"],
-            rating: game["rating"],
+            rating: game["rating"].round(2),
             summary: game["summary"],
             cover: game["cover"]
         })
@@ -35,7 +35,7 @@ finalModel.each do |game|
             name: game["name"],
             genre: game["genres"][0]["name"],
             platform: game["platforms"][0]["name"],
-            rating: game["rating"],
+            rating: game["rating"].round(2),
             summary: game["summary"],
             cover: game["cover"]
         })

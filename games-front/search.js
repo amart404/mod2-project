@@ -43,6 +43,10 @@ function createCards(games){
         let p4 = document.createElement("p")
         if (game.genre.includes(gResult) && game.platform.toLowerCase().includes(pResult)) {
             h3.innerText = game.name
+            p1.classList.add("game-info")
+            p2.classList.add("game-info")
+            p3.classList.add("game-info")
+            p4.classList.add("game-info")            
             p1.innerText = `Rating: ${game.rating}`
             p2.innerText = `Genre: ${game.genre}`
             p3.innerText = `Platform: ${game.platform}`
