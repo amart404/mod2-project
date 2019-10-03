@@ -63,6 +63,7 @@ html {
 
 }
 
+
 .container {
     background: url("collage.jpg");
     background-position: inherit;
@@ -74,7 +75,7 @@ header {
     justify-items: center;
     align-items: center;
     width: 100%;
-    padding: 7vh;
+    /* padding: 7vh 0vh 7vh 7vh; */
     border-bottom: 0.4px rgb(83, 83, 83) solid;
     background-color: rgba(128, 128, 128, 0.74);
     overflow-x: hidden;
@@ -91,7 +92,6 @@ label {
     justify-self: center;
     display: block;
     font-size: 10vh;
-    padding-left: 7vh;
     color: white;
     font-family: 'Overpass', sans-serif;
     text-shadow: 2px 2px 8px black;
@@ -296,4 +296,12 @@ p {
 
 img {
     height: 200px;
+}
+
+select .initial{
+    color: grey;
+}
+
+select {
+    margin-top: 12px;
 }
