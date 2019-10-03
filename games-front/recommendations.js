@@ -12,11 +12,18 @@ function createCards(games){
 
     games.forEach(game => {
         let h3 = document.createElement("h3")
-        let p = document.createElement("p")
-        let a = document.createElement("a")
-        let a2 = document.createElement("a")
+        let p1 = document.createElement("p")
+        let p2 = document.createElement("p")
+        let p3 = document.createElement("p")
+        let p4 = document.createElement("p")
 
-        div.append(h3, p, a, a2)
+        h3.innerText = game.name
+        p1.innerText = `Rating: ${game.rating}`
+        p2.innerText = `Genre: ${game.genre}`
+        p3.innerText = `Platform: ${game.platform}`
+        p4.innerText = `Summary: ${game.summary}`
+
+        div.append(h3, p1, p2, p3, p4)
     })
 
     body.append(h2, div)
