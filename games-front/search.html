@@ -24,7 +24,7 @@
         <div class="selects" id="selects">
             <label for="genre">Genre:</label>
             <select name="genre" id="genre" required>
-                <option class="initial">Choose a genre</option>
+                <option selected disabled class="initial" value="">Choose a genre</option>
                 <option>Simulator</option>
                 <option>Tactical</option>
                 <!-- <option>Quiz/Trivia</option> -->
@@ -48,12 +48,15 @@
             </select>
             <label for="platform">Platform:</label>
             <select name="platform" id="platform" required>
-                <option class="initial">Choose a platform</option>
+                <option selected disabled class="initial" value="">Choose a platform</option>
                 <option value="xbox">Xbox</option>
                 <option value="playstation">Playstation</option>
                 <option value="pc">PC</option>
+                <option value="mac">Mac</option>
+                <option value="linux">Linux</option>
                 <option value="ios">iOS</option>
                 <option value="android">Android</option>
+                <option value="nintendo 3ds">Nintendo 3DS</option>
             </select>
         </div>
         <label for="title">Search by title<br><i>(Optional)</i></label>
