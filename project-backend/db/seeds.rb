@@ -41,3 +41,27 @@ finalModel.each do |game|
         })
     end
 end
+
+Game.all.map do |game|
+    if game.name == "Pony Creator" || game.name == "The Legend of Kusakari"
+        temp = eval(game.platform)
+        game.update_attribute(:platform, temp[0]["name"])
+    elsif game.name == "WordCookies Cross" || game.name == "Caesars Casino Official Slots"
+        temp = eval(game.platform)
+        game.update_attribute(:platform, temp[0]["name"])
+    end
+end
+
+Game.all.map do |game|
+    if game.cover != nil
+        temp = eval(game.cover)
+        game.update_attribute(:cover, temp["url"][2..-1])
+    end
+end
+
+# Game.all.map do |game|
+#     if eval(game.platform)
+#         temp = eval(game.platform)
+#         game.update_attribute(:platform, temp["name"])
+#     end
+# end
