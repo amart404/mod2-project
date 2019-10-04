@@ -7,9 +7,10 @@ const submit = document.querySelector("#button")
 let mockModel = []
 let gResult = ""
 let pResult = ""
+let givenUser = ""
 
 function getLastUser(users){
-    const givenUser = users.slice(-1)[0]
+    givenUser = users.slice(-1)[0]
     login.innerHTML = `<a href="http://localhost:5500/games-front/index.html">Not ${givenUser.name}? </a>`
     title.textContent = `Hello, ${givenUser.name}!`
 }
@@ -53,7 +54,7 @@ function createCards(games){
         let p2 = document.createElement("p")
         let p3 = document.createElement("p")
         let p4 = document.createElement("p")
-        let p5 = document.createElement("img")
+        let p5 = document.createElement("p")
 
         if (game.genre.includes(gResult) && game.platform.toLowerCase().includes(pResult)) {
             h3.innerText = game.name

@@ -217,7 +217,7 @@ nav ul {
     background: rgba(49, 46, 46, 0.541);
     font-size: 2rem;
     border-bottom: grey solid 1px;
-    color: rgb(177, 161, 166);
+    color: rgb(255, 255, 255);
     font-family: 'Overpass', sans-serif
 }
 #brand {
@@ -254,7 +254,7 @@ nav ul li:hover {
 
 a {
     text-decoration: none;
-    color: rgb(177, 161, 166);
+    color: rgb(214, 214, 214);
 }
 
 abbr {
@@ -328,9 +328,10 @@ h2 {
 }
 
 .game-info {
-    border: 1px solid rgba(94, 91, 91, 0.836);
+    border: 1px solid rgb(56, 55, 55);
     border-radius: 5px;
-    margin: 1vh
+    margin: 1vh;
+    padding: 1vh;
 }
 
 .game {
@@ -342,8 +343,8 @@ h2 {
     padding: 2vh;
     border-radius: 10px;
     margin: 2vh;
-    background: linear-gradient(to top right, rgb(37, 90, 158), rgb(81, 5, 131));
-    box-shadow: 3px 7px 10px 3px rgba(0, 0, 0, 0.651);
+    background: rgb(37, 90, 158);
+    box-shadow: 3px 7px 10px 3px rgba(0, 0, 0, 0.788);
 }
 
 .game-info:nth-of-type(2), .game-info:nth-of-type(3), .game-info:nth-of-type(1) {
