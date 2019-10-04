@@ -30,6 +30,6 @@ This is how you can get this page running yourself
 
 ## Video Example of Program Running
 (Sorry about the name flashing at the end, we're experiencing a problem with fetch.)
-Using the page we built [YouTube]("https://www.youtube.com/watch?v=f5hX6kgYKOY&feature=youtu.be")
+Using the page we built [YouTube](https://www.youtube.com/watch?v=f5hX6kgYKOY&feature=youtu.be)
 
 This project has proven to be harder in someways, yet overall a lot easier and smoother as a process, compared to the module 1 project. This is the last duo project of the program and mods 3, 4, and 5 are all solo. 
